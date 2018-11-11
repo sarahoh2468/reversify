@@ -39,7 +39,6 @@ public class reversify {
         File file = new File(sc.next());
         ArrayList<BufferedImage> totalFrames = getTotalFrames(file);
         ArrayList<BufferedImage> result = getFrames(totalFrames);
-        System.out.println(numberOfFrames(result));
         // for each image, there is a keyword(s) assigned
         for (int i = 0; i < result.size(); i++) {
             //search api for image
