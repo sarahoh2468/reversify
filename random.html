@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="HACKS CSS.css"> 
+</head>
+<body>
+
+<div class="top">
+	<h1>Random</h1>
+</div>
+
+<h3>We'll generate a random gif for you!</h3>
+
+<div class="about_main">
+	<div class="upload_button">
+
+    	<button class="btn" type="submit" onclick="myFunction()">GIF Generator</button>
+    	<input class="rand_btn" type="text" id="userInput" />
+
+	<script>
+		/*function othername() {
+    		var input = document.getElementById("userInput").value;
+    		var.replace(/\s+/g, '');
+    		alert(input);*/
+
+    	function myFunction() {
+    		var str;
+    		var search;
+    		var str = document.getElementById("userInput").value; 
+    		console.log(str)
+        	var search = str.replace(/ /g, "+");
+        	/*document.getElementById("userInput").value = search;*/
+        	
+    	
+
+		var key = 'cv5kIb99XcGZJFHaFR7JAg5iqKjD1qMQ';
+		var url = 'http://api.giphy.com/v1/gifs/search?q=' + search;
+		var full_url = url + '&api_key=' + key;
+		alert(full_url);
+		fetch(full_url);
+		}
+
+
+
+		
+
+		</script>
+
+	</div>
+
+
+</div>
+
+</body>
+
+</html>
